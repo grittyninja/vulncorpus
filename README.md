@@ -126,7 +126,7 @@ Contributions to VulnCorpus are welcome. Please consider the following guideline
 If you use VulnCorpus in your research, please cite it as follows:
 
 ```bibtex
-@misc{vulncorpus2023,
+@misc{vulncorpus2025,
   author = {Nugraha H},
   title = {VulnCorpus: A Security Vulnerability Report Dataset},
   year = {2025},
