@@ -183,25 +183,25 @@ The vulnerability can be exploited by injecting shell metacharacters into the `d
    ```
    normal_input ; malicious_command
    
-```
+   ```
 
 2. **Command substitution**: Using `$()` or backticks
    ```
    normal_input $(malicious_command)
    
-```
+   ```
 
 3. **Logical operators**: Using `&&` or `||`
    ```
    normal_input && malicious_command
    
-```
+   ```
 
 4. **Pipelines**: Using `|` to pipe output
    ```
    normal_input | malicious_command
    
-```
+   ```
 
 **Execution Environment Considerations:**
 

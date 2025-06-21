@@ -175,7 +175,7 @@ app.listen(3000, () => {
    ```bash
    git log -p --all -S "GENERIC_API_KEY"
    
-```
+   ```
 
 2. **Automated Secret Detection Tools**: Attackers routinely use specialized tools to find secrets in repositories:
    - **GitRob**: Scans organizations for sensitive files
@@ -185,8 +185,7 @@ app.listen(3000, () => {
 3. **GitHub Search**: Simple queries like `"API_KEY"` in GitHub search can reveal hard-coded credentials:
    ```
    "const API_KEY" filename:*.js
-   
-```
+   ```
 
 **Technical issues:**
 

