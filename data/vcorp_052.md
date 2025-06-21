@@ -66,8 +66,6 @@ This vulnerability involves the use of a non-cryptographic pseudo-random number 
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A critical vulnerability has been identified in Acme Corp's Golang-based microservices architecture, specifically in the session token generation functionality. The authentication service is using the standard library's `math/rand` package, which is a non-cryptographically secure pseudo-random number generator (PRNG), to generate security-critical session tokens.
 

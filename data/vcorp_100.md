@@ -53,8 +53,6 @@ This vulnerability involves a client-side DOM-based Cross-Site Scripting (XSS) f
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A DOM-based Cross-Site Scripting (XSS) vulnerability has been discovered in Acme Corp's legacy user management portal, specifically in the profile update component. The vulnerability stems from improper handling of user-controlled input obtained from URL query parameters.
 

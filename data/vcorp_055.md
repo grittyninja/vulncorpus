@@ -62,8 +62,6 @@ This vulnerability involves the generation of RSA keys with insufficient key len
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A cryptographic vulnerability has been identified in Acme Corp's Go-based microservices where RSA keys are being generated with insufficient bit length (1024 bits), falling below the industry-recommended minimum of 2048 bits. The vulnerable code uses the Go `crypto/rsa` package with a legacy configuration that doesn't enforce adequate key length validation.
 

@@ -63,8 +63,6 @@ This vulnerability involves the insecure configuration of Jackson's default typi
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical insecure deserialization vulnerability exists in Acme Corp's Java-based microservices, specifically in a Spring Boot application using Jackson 2.9.x for JSON processing. The application enables Jackson's default typing globally without proper validation constraints, allowing polymorphic type handling for untrusted input. This configuration permits deserialization of arbitrary Java classes specified in JSON payloads.
 

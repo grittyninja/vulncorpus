@@ -62,8 +62,6 @@ This vulnerability involves directly embedding AWS credentials (Access Key ID an
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical security vulnerability exists in Acme Corp's internal microservices repository where AWS credentials (both Access Key ID and Secret Access Key) are hardcoded directly in a Python source file. The code uses these embedded credentials to authenticate with AWS S3 services via the Boto3 SDK.
 

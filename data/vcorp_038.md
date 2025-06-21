@@ -84,8 +84,6 @@ This vulnerability involves a server-side request forgery (SSRF) issue in Acme C
    - Integrity (I): Low (L) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L
-
 # Description
 A critical Server-Side Request Forgery (SSRF) vulnerability exists in Acme Corp's Go-based Gin web application that could allow attackers to send unauthorized HTTP requests to internal networks or external systems. The vulnerable endpoint `/fetch` directly concatenates an untrusted `host` parameter with a hardcoded HTTP scheme and `/admin` path without any validation or sanitization.
 

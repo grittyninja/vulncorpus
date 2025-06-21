@@ -62,8 +62,6 @@ This vulnerability involves hardcoded AWS credentials (Access Key ID and Secret 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's codebase, where AWS credentials (Access Key ID and Secret Access Key) were hardcoded directly in a Python configuration file and committed to a public Git repository. The exposure was discovered during a routine secrets scanning operation targeting public repositories.
 

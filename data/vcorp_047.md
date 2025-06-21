@@ -69,8 +69,6 @@ This vulnerability allows remote attackers to execute arbitrary operating system
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A command injection vulnerability exists in Acme Corp's Go-based gRPC microservices that allows attackers to execute arbitrary shell commands on the underlying operating system. The vulnerability stems from improper handling of user input in an administrative gRPC endpoint where the application directly passes client-provided command strings to the operating system shell via `exec.Command("bash", "-c", userInput)` without any sanitization or validation.
 

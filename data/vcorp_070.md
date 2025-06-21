@@ -52,8 +52,6 @@ This vulnerability involves an Android activity that is improperly exported, all
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's Android mobile application where the `ControlPanelActivity` is incorrectly configured with `android:exported="true"` in the AndroidManifest.xml file without implementing proper permission checks. This misconfiguration exposes privileged administrative functionality to any application installed on the same device.
 

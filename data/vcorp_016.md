@@ -77,8 +77,6 @@ This vulnerability involves the unsafe construction of XPath queries by directly
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 An XPath injection vulnerability exists in Acme Corp's .NET Core gRPC service, specifically in the `UserDataService.GetUserDetails` method. The vulnerability occurs because the application constructs XPath queries by directly concatenating untrusted user input (`request.UserId`) into the query string without proper validation or sanitization.
 

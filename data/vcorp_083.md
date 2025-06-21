@@ -50,8 +50,6 @@ This vulnerability involves direct user input interpolation into SQL queries usi
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A SQL injection vulnerability has been identified in Acme Corp's Java web application built on Spring Boot with a MySQL backend. The vulnerability exists in the user authentication module where user-supplied input is directly interpolated into SQL queries using Java's `String.format()` method without any validation or sanitization.
 

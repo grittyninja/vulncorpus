@@ -85,8 +85,6 @@ This vulnerability involves improper handling of user input in a Go web applicat
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:L
-
 # Description
 A SQL injection vulnerability exists in Acme Corp's Go-based web application, specifically in the admin-only user search API endpoint. The vulnerability stems from insecure coding practices where user input from URL query parameters is directly concatenated into SQL queries without proper sanitization or parameterization.
 

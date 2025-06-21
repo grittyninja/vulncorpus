@@ -82,8 +82,6 @@ This vulnerability involves an SSRF issue in Acme Corp's Golang microservice tha
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
-
 # Description
 A critical Server-Side Request Forgery (SSRF) vulnerability has been identified in Acme Corp's Golang microservice built with the Gorilla toolkit. The vulnerability exists in the `/proxy` endpoint, which accepts a user-supplied `host` parameter that is directly concatenated into a URL string without validation or sanitization.
 

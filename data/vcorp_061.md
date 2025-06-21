@@ -61,8 +61,6 @@ This vulnerability involves incorrect usage of Go's `filepath.Clean` function wh
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability exists in Acme Corp's Golang-based file server due to improper sanitization of file paths from HTTP requests. The application incorrectly relies on `filepath.Clean` to secure file paths, but this function only normalizes paths without preventing directory traversal attacks.
 

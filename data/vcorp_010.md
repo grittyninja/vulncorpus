@@ -58,8 +58,6 @@ This vulnerability involves the direct concatenation of untrusted user input int
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A command injection vulnerability exists in Acme Corp's C++ based logistics application running on Ubuntu 20.04. The vulnerability is located in the file management module, where the application directly concatenates untrusted user input into a command string executed via the standard C library's `system()` function without any validation or sanitization.
 

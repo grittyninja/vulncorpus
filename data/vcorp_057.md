@@ -68,8 +68,6 @@ This vulnerability involves a security misconfiguration in Acme Corp's Go-based 
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N
-
 # Description
 A security vulnerability has been identified in Acme Corp's Go-based web application, specifically in the session cookie configuration of the authentication module. The application sets session cookies without the `Secure` flag, allowing these cookies to be transmitted over unencrypted HTTP connections.
 

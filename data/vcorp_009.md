@@ -59,8 +59,6 @@ This vulnerability involves direct string concatenation of untrusted user input 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical SQL injection vulnerability exists in Acme Corp's legacy C++ authentication service that interfaces with a MySQL backend database. The vulnerability occurs when untrusted user input is directly concatenated into SQL query strings without proper sanitization or parameterization.
 

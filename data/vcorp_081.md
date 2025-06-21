@@ -64,8 +64,6 @@ This vulnerability involves the use of non-cryptographic random number generator
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A significant security vulnerability has been identified in Acme Corp's Java-based authentication module where session tokens are generated using `java.util.Random()` instead of cryptographically secure alternatives. This implementation is found in the Spring Boot application deployed in a Tomcat environment.
 

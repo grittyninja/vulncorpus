@@ -46,8 +46,6 @@ This vulnerability involves the absence of Subresource Integrity (SRI) verificat
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N
-
 # Description
 Acme Corp's customer portal is vulnerable to script tampering due to missing Subresource Integrity (SRI) attributes on externally hosted JavaScript libraries. Specifically, the jQuery library loaded from Google's CDN lacks the necessary cryptographic hash verification that would prevent the execution of modified scripts.
 

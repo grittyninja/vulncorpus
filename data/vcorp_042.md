@@ -74,8 +74,6 @@ This vulnerability involves a path traversal issue in Acme Corp's Golang web app
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability exists in Acme Corp's Golang web application using the Gorilla Mux router. The vulnerability is present in the `/files/{filename}` API endpoint, which constructs file paths by directly concatenating unsanitized user input to a base directory path without proper validation.
 

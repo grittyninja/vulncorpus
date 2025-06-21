@@ -56,8 +56,6 @@ This vulnerability involves the direct assignment of user-controlled input to wi
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-
 # Description
 A client-side open redirect and XSS vulnerability exists in Acme Corp's web application within a React.js component. The vulnerable code directly assigns a user-controlled parameter (`$PROP`) to `window.location` without proper validation or sanitization:
 

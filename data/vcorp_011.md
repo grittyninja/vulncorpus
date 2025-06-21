@@ -73,8 +73,6 @@ This vulnerability involves a command injection flaw in a .NET Core gRPC service
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A high-severity command injection vulnerability has been identified in Acme Corp's microservices architecture, specifically in a .NET Core-based gRPC service responsible for executing OS commands. The vulnerable service directly incorporates user-supplied input from gRPC requests into shell commands without performing any validation or sanitization. Exploitation requires both VPN access to the internal network and basic authenticated access to the service.
 

@@ -83,8 +83,6 @@ This vulnerability involves a Cross-Site Scripting (XSS) flaw in a Golang web ap
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's Golang web application, specifically in the search functionality. The vulnerability stems from the improper use of Go's `template.URL()` function, which marks a string as a trusted URL that should not undergo HTML escaping.
 

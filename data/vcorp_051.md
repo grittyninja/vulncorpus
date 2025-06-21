@@ -66,8 +66,6 @@ This vulnerability involves a critical authentication bypass in Acme Corp's Go-b
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A critical authentication bypass vulnerability exists in Acme Corp's Go-based API services due to improper JWT validation. The application uses the `jwt-go` library but fails to verify the signing algorithm, allowing attackers to forge tokens with the `none` algorithm that bypass signature verification entirely.
 

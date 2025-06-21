@@ -47,8 +47,6 @@ This vulnerability involves a Java web application setting the JSESSIONID authen
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A security vulnerability has been identified in Acme Corp's Java-based web application running on Apache Tomcat, where the authentication session cookie (JSESSIONID) is being set without the 'secure' flag. This configuration error allows the session cookie to be transmitted over unencrypted HTTP connections, not just HTTPS.
 

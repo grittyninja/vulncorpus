@@ -52,8 +52,6 @@ This vulnerability involves hardcoded database credentials detected in a Node.js
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:L
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's Node.js application where database credentials are hardcoded directly in a legacy configuration file. During a routine audit, automated secrets scanning detected a high-entropy string pattern in a source code repository, specifically a plaintext database password stored in `config.js`.
 

@@ -74,8 +74,6 @@ This vulnerability involves a lack of CSRF protection in a Go web application us
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N
-
 # Description
 A Cross-Site Request Forgery (CSRF) vulnerability exists in Acme Corp's Go-based web application due to the absence of CSRF protection mechanisms in HTTP endpoints implemented with the standard `net/http` package. The application relies on cookie-based session management but fails to implement CSRF token validation, notably missing the Gorilla CSRF middleware.
 

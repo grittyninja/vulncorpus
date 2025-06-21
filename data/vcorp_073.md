@@ -63,8 +63,6 @@ This vulnerability allows attackers with high-level access to execute arbitrary 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A command injection vulnerability exists in Acme Corp's Java-based application running on Spring Boot with Apache Tomcat server. The vulnerability is located in the FileLogger module, which passes user-controlled input directly to system commands without proper validation or sanitization.
 

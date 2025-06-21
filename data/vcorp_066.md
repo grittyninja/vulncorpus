@@ -65,8 +65,6 @@ This vulnerability involves a path traversal flaw in Acme Corp's internal Go web
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability has been identified in Acme Corp's internal Go web application, specifically in the file retrieval endpoint `/read`. The vulnerability exists because the application directly concatenates user-supplied input from the URL query parameter `file` to a base directory path without proper validation or sanitization.
 

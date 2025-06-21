@@ -58,8 +58,6 @@ This vulnerability represents a classic Reflected Cross-Site Scripting (XSS) iss
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A Reflected Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's legacy Java web application, specifically in the `GreetingServlet` class that processes the `/greet` endpoint. The vulnerable code directly concatenates unsanitized user input from the `name` request parameter into an HTML response without any encoding or escaping:
 

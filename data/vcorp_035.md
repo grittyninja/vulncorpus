@@ -72,8 +72,6 @@ This vulnerability involves direct execution of unsanitized user input via shell
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A command injection vulnerability has been discovered in Acme Corp's Go web application built with the Gin framework. The application contains an endpoint at `/execute` that directly passes user-supplied query parameters to the system shell without any validation or sanitization. This endpoint is only accessible from the internal network via VPN and requires administrative credentials due to authentication middleware.
 

@@ -59,8 +59,6 @@ This vulnerability involves an open redirect flaw in Acme Corp's Go-based web ap
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N
-
 # Description
 An open redirect vulnerability has been identified in Acme Corp's Go-based web application. The vulnerability exists in the `/redirect` endpoint, which constructs HTTP redirects based on unsanitized user input from the query parameter `request`. The application directly uses this parameter in the `http.Redirect()` function without any validation or allowlisting of permitted destinations.
 

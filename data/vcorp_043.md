@@ -69,8 +69,6 @@ This vulnerability involves the absence of the HttpOnly flag in session cookies 
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N
-
 # Description
 A security vulnerability was discovered in Acme Corp's Golang web application that uses the Gorilla sessions library for session management. The application is configured to issue session cookies without the `HttpOnly` flag, which is a critical security attribute that prevents client-side scripts from accessing cookie data.
 

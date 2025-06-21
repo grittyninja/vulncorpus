@@ -49,8 +49,6 @@ This vulnerability analysis examines a critical container security weakness invo
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's Docker container infrastructure where the host's Docker socket (`/var/run/docker.sock`) is directly mounted into containers. This dangerous configuration effectively grants container processes complete access to the host's Docker daemon, breaking the fundamental isolation guarantee of containerization.
 

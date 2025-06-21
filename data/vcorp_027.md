@@ -49,8 +49,6 @@ This vulnerability involves Nginx reverse proxies improperly handling HTTP proto
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-
 # Description
 A security vulnerability was identified in Acme Corp's externally exposed Nginx reverse proxies where improper handling of HTTP/1.1 Upgrade headers enables H2C (HTTP/2 Cleartext) smuggling attacks. The misconfiguration allows HTTP/1.1 requests containing `Upgrade: h2c` headers to be forwarded to backend servers instead of strictly validating that only `Upgrade: websocket` headers are permitted.
 

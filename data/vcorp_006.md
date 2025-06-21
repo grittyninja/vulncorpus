@@ -58,8 +58,6 @@ This vulnerability involves a classic format string injection in a C++ microserv
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A format string injection vulnerability exists in Acme Corp's C++ microservice that handles user-supplied log messages via RESTful APIs. The vulnerability occurs in the logging subsystem where user-controlled input is directly passed as the format string parameter to `snprintf()` without proper validation or sanitization.
 

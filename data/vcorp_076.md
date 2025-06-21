@@ -55,8 +55,6 @@ This vulnerability involves the improper use of the AES cipher in Electronic Cod
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 A significant cryptographic vulnerability has been identified in Acme Corp's enterprise Java application deployed on Apache Tomcat. The cryptographic module improperly employs the AES cipher in Electronic Code Book (ECB) mode (`AES/ECB/PKCS5Padding`) to encrypt sensitive data.
 

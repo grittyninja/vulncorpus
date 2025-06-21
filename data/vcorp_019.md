@@ -71,8 +71,6 @@ This vulnerability involves insecure deserialization of untrusted data in a lega
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical vulnerability exists in Acme Corp's legacy .NET application where a public API endpoint deserializes data using the insecure `BinaryFormatter` class without proper validation. This Windows service, which processes incoming binary data streams running on .NET Framework 4.7 in an Azure environment, fails to validate the types being deserialized, allowing attackers to supply crafted payloads leading to remote code execution.
 

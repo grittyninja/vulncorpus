@@ -50,8 +50,6 @@ This vulnerability involves the absence of the HttpOnly flag in session cookies 
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N
-
 # Description
 A security vulnerability was identified in Acme Corp's Java-based web application where session cookies are created without the `HttpOnly` flag. This misconfiguration allows client-side JavaScript to access sensitive session tokens through the `document.cookie` API, creating a significant security risk when combined with Cross-Site Scripting (XSS) vulnerabilities.
 

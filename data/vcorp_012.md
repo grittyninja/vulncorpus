@@ -76,8 +76,6 @@ This vulnerability involves a NoSQL injection flaw in Acme Corp's .NET Core gRPC
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
-
 # Description
 A critical NoSQL injection vulnerability has been identified in Acme Corp's .NET Core gRPC service that interfaces with MongoDB. The vulnerability exists in the `GetUserInfo` method of the `UserService` class, where user-controlled input from a gRPC request is directly concatenated into a MongoDB query without proper sanitization or parameterization.
 

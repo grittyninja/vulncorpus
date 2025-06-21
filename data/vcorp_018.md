@@ -55,8 +55,6 @@ This vulnerability in Acme Corp's ASP.NET MVC application enables cross-site req
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
-
 # Description
 A significant security vulnerability has been identified in Acme Corp's ASP.NET MVC application, specifically in the `UpdateAccountSettings` method of the `AccountController`. The controller method lacks two critical security controls: antiforgery token validation and strict content-type checking.
 

@@ -100,8 +100,6 @@ This vulnerability involves a Go-based gRPC service that constructs outbound HTT
    - Integrity (I): None (N) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:L
-
 # Description
 A critical Server-Side Request Forgery (SSRF) vulnerability has been identified in Acme Corp's Go-based gRPC service. The vulnerability exists in the `HandleRequest` function where a user-supplied parameter (`TargetHost`) is directly embedded into a URL string without any validation or sanitization.
 

@@ -67,8 +67,6 @@ This vulnerability involves unsafe Java object deserialization in an enterprise 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical insecure deserialization vulnerability has been identified in Acme Corp's Java-based enterprise application running on Apache Tomcat with Spring Boot. The affected component is a servlet that processes incoming HTTP POST requests by directly deserializing Java objects from the request input stream without any validation or integrity checking.
 

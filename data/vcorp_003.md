@@ -59,8 +59,6 @@ This vulnerability exists in Acme Corp's legacy logging system where the unsafe 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical buffer overflow vulnerability exists in Acme Corp's legacy logging system due to the use of the unsafe `gets()` function in a user input processing module. This C standard library function does not perform any boundary checks, allowing attackers to exceed the fixed-size buffer (64 bytes) and potentially overwrite adjacent memory.
 

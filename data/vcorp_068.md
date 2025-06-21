@@ -77,8 +77,6 @@ This vulnerability involves an XSS flaw in Acme Corp's Go-based web application 
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's Go-based web application. The vulnerability stems from improper handling of user input in the template rendering process, where the application directly concatenates unsanitized query parameters into HTML template strings before parsing.
 

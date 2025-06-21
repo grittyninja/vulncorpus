@@ -55,8 +55,6 @@ This vulnerability allows remote attackers to execute arbitrary JavaScript code 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical vulnerability has been discovered in an Acme Corp AWS Lambda function that processes user input from API Gateway events. The function directly passes unvalidated, user-supplied input to JavaScript's `eval()` function, enabling arbitrary code execution within the Lambda environment.
 

@@ -77,8 +77,6 @@ This vulnerability involves the improper configuration of error handling in an A
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-
 # Description
 A security vulnerability was identified in Acme Corp's ASP.NET Core web API running in production, where detailed stack trace information is inappropriately disclosed to end users when errors occur. This misconfiguration exposes sensitive internal details including file paths, method names, line numbers, and potentially database structure, significantly assisting attackers in reconnaissance and targeted exploitation efforts.
 

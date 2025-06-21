@@ -65,8 +65,6 @@ This vulnerability involves a classic Server-Side Request Forgery (SSRF) pattern
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:N
-
 # Description
 A Server-Side Request Forgery (SSRF) vulnerability exists in Acme Corp's .NET Core microservice architecture that uses gRPC for communication. The vulnerability is located in the HTTP client integration where unvalidated user input is directly incorporated into the base URL for outgoing HTTP requests.
 

@@ -50,8 +50,6 @@ This vulnerability involves the unsafe practice of piping untrusted remote conte
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's CI/CD pipeline deployment scripts. The scripts fetch remote shell code via an insecure HTTP connection and pipe it directly to bash for execution without any integrity verification. This practice is commonly known as "curl pipe bash" and represents a significant security risk.
 

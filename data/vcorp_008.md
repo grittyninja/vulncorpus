@@ -88,8 +88,6 @@ This vulnerability involves improper handling of user input in an LDAP authentic
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 A critical LDAP injection vulnerability has been identified in Acme Corp's C++ authentication module that interfaces with the corporate LDAP directory. The vulnerability stems from user-supplied input being directly concatenated into LDAP filter strings without proper escaping or validation, allowing attackers to manipulate the structure of LDAP queries.
 
