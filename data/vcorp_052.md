@@ -159,7 +159,7 @@ The vulnerability stems from two fundamental cryptographic mistakes in the sessi
    // Reseeds on every call using time
    rand.Seed(time.Now().UnixNano())
    
-```
+   ```
 
    This compounds the problem in several ways:
    

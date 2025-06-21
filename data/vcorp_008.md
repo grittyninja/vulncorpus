@@ -215,20 +215,20 @@ By injecting these characters, attackers can manipulate the query structure. For
    ```
    (&(objectClass=user)(uid=john))
    
-```
+   ```
 
 2. **Manipulated filter with injection `*)(|(uid=*`:**
    ```
    (&(objectClass=user)(uid=*)(|(uid=*)))
    
-```
+   ```
    This creates a condition that matches any user object.
 
 3. **Filter with information disclosure injection `*)(mail=*)(objectClass=*`:**
    ```
    (&(objectClass=user)(uid=*)(mail=*)(objectClass=*))
    
-```
+   ```
    This pulls additional attributes beyond the intended scope.
 
 The vulnerability is particularly dangerous because:

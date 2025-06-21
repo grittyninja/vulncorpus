@@ -202,7 +202,7 @@ int main() {
    ```cpp
    std::string ldapFilter = "(uid=" + userInput + ")";
    
-```
+   ```
 
 2. **LDAP Query Syntax**: LDAP filters use a specific syntax with special characters that have meaning within queries:
    - Parentheses `()` define the scope of filters

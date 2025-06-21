@@ -163,7 +163,7 @@ public class SessionTokenGenerator {
    ```
    next(n) = (seed * 0x5DEECE66DL + 0xBL) & ((1L << 48) - 1)
    
-```
+   ```
    This algorithm is deterministic and not designed for security purposes.
 
 2. **Predictable sequence**: If an attacker can determine the internal state of the PRNG (which has only 2^48 possible states), they can predict all future outputs.

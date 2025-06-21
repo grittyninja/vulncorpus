@@ -171,7 +171,7 @@ The fundamental issues are:
    ```javascript
    jwt.sign({ id: user.id, role: user.role }, config.jwtSecret, ...)
    
-```
+   ```
 
 4. **Usage Pattern**: The authentication module exports a `generateToken` function that other parts of the application likely use to create tokens for authenticated users. This suggests the tokens are used throughout the application for maintaining session state and authorization.
 
