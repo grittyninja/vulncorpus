@@ -82,8 +82,6 @@ This vulnerability involves a fundamentally flawed SSL implementation in Acme Co
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A serious security vulnerability was discovered in Acme Corp's Java-based backend services, where SSL certificate validation has been completely disabled through the implementation of an empty `X509TrustManager`. The vulnerable code creates a custom trust manager that accepts all certificates without any validation, effectively nullifying the security provided by SSL/TLS.
 

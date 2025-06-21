@@ -55,8 +55,6 @@ This vulnerability involves an unvalidated redirect in Acme Corp's Java Spring a
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-
 # Description
 An open redirect vulnerability has been identified in Acme Corp's Java Spring application within the `RedirectController`. This controller accepts a user-supplied `target` parameter and uses it directly to create a URL for redirection without any validation or sanitization.
 

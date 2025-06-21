@@ -66,8 +66,6 @@ This vulnerability involves the direct evaluation of untrusted content retrieved
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical command injection vulnerability exists in Acme Corp's deployment script `/usr/local/bin/update_config.sh`. The script retrieves configuration data from an internal server using a non-secured HTTP connection and directly executes the retrieved content using `eval` without any validation or sanitization.
 

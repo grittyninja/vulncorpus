@@ -63,8 +63,6 @@ This vulnerability analysis examines a critical SpEL injection vulnerability in 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical SpEL (Spring Expression Language) injection vulnerability has been identified in Acme Corp's Spring Boot application. The vulnerability exists in a REST controller endpoint that directly evaluates user-supplied input as SpEL expressions without any validation or sanitization.
 

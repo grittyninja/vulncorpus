@@ -85,8 +85,6 @@ This vulnerability involves an unbounded decompression mechanism in Acme Corp's 
    - Integrity (I): None (N) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H
-
 # Description
 A medium-severity vulnerability has been identified in Acme Corp's Go-based file upload microservice. The service improperly handles decompression of ZIP files by using an unbounded `io.Copy()` function without implementing size limits, making it susceptible to decompression bomb attacks.
 

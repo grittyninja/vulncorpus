@@ -79,8 +79,6 @@ This vulnerability involves a persistent cross-site scripting (XSS) issue in Acm
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N
-
 # Description
 A Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's web application built with Go and the Gin framework. The vulnerability is present in the `/welcome` endpoint, which accepts a `username` parameter via query string and renders it directly in a web page template.
 

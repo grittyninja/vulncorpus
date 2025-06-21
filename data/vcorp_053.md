@@ -64,8 +64,6 @@ This vulnerability involves the continued use of the deprecated and insecure SSL
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 A critical cryptographic vulnerability has been identified in Acme Corp's Golang-based microservices, where an API endpoint responsible for secure communications is configured to accept the deprecated SSLv3 protocol. The code explicitly sets `tls.VersionSSL30` as the minimum allowed TLS version, despite SSLv3 being known to be vulnerable to several attacks, most notably POODLE.
 

@@ -95,8 +95,6 @@ This vulnerability involves a critical NoSQL injection weakness in Acme Corp's G
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A severe NoSQL injection vulnerability exists in Acme Corp's Go-based web service that uses the Gorilla Mux framework with MongoDB. The vulnerability is located in the user query functionality where untrusted user input from URL parameters is directly embedded into a MongoDB query's `$where` clause without any sanitization.
 

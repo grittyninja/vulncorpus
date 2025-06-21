@@ -63,8 +63,6 @@ This vulnerability involves using unencrypted gRPC communication in Acme Corp's 
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A security vulnerability has been identified in Acme Corp's Go-based microservices infrastructure where gRPC client connections are established without TLS encryption by using the `grpc.WithInsecure()` option. This insecure configuration was discovered during static code review of inter-service communication components.
 

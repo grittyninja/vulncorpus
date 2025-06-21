@@ -90,8 +90,6 @@ This vulnerability involves a classic SQL injection pattern in a Go-based gRPC m
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A SQL injection vulnerability has been identified in Acme Corp's gRPC microservice. The vulnerability exists in the `GetUser` function where user-supplied input from gRPC requests (`req.Username`) is directly interpolated into a SQL query using `fmt.Sprintf()` without any sanitization or validation.
 

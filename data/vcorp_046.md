@@ -65,8 +65,6 @@ This vulnerability involves an unsanitized direct output of user-controlled data
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-
 # Description
 A Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's Go-based web application using the Gorilla mux router. The vulnerability occurs in the `/vulnerable` endpoint handler where user input from query parameters is retrieved and directly inserted into HTML output without any sanitization or encoding.
 

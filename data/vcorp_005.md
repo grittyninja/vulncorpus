@@ -62,8 +62,6 @@ This vulnerability involves improper path handling in Acme Corp's C++ file handl
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability has been identified in Acme Corp's C++ file handling component. The vulnerability exists because the application directly concatenates unsanitized user input to a base directory path without proper validation or canonicalization, potentially allowing attackers to access files outside the intended directory.
 

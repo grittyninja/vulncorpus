@@ -92,8 +92,6 @@ This vulnerability exists in Acme Corp's AWS Lambda function written in Go which
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
-
 # Description
 A critical SQL injection vulnerability has been discovered in an Acme Corp AWS Lambda function written in Go. The function accepts user input from the event object and directly concatenates this input into a SQL query without proper sanitization or parameterization.
 

@@ -65,8 +65,6 @@ This vulnerability involves embedding a static, generic API key directly in the 
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 A critical security vulnerability was discovered in Acme Corp's Node.js backend application where a generic API key (`GENERIC_API_KEY_12345`) is hard-coded directly into the production source code. This API key, originally intended for integration testing, was inadvertently deployed to the production environment and subsequently exposed through public version control history.
 

@@ -54,8 +54,6 @@ This vulnerability involves a classic buffer overflow issue caused by using the 
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A buffer overflow vulnerability exists in Acme Corp's legacy C-based user management module due to the insecure use of the `scanf()` function without proper bounds checking. The code allocates a fixed-size buffer of 20 bytes for storing a username but fails to limit the input length when reading user data:
 

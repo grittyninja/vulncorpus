@@ -69,8 +69,6 @@ This vulnerability involves command injection in an AWS Lambda function where us
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical command injection vulnerability has been identified in an AWS Lambda function that uses the Node.js `child_process.exec()` method to execute shell commands with unsanitized user input. The vulnerability allows attackers to inject arbitrary commands by manipulating the `event.directory` parameter, which is directly concatenated into a shell command string without validation.
 

@@ -60,8 +60,6 @@ This critical vulnerability stems from improper implementation of JWT token vali
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical authentication vulnerability has been identified in Acme Corp's Java authentication module built on Spring Boot and the Auth0 java-jwt library. The vulnerability stems from the application decoding JWT tokens without performing signature verification, which is a mandatory security step.
 

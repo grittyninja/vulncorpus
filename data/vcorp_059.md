@@ -62,8 +62,6 @@ This vulnerability involves direct inclusion of user-supplied input into HTML ou
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A Cross-Site Scripting (XSS) vulnerability exists in Acme Corp's Go-based web service, specifically in the HTTP handler function that processes user greetings. The vulnerable code directly concatenates unsanitized user input from URL query parameters into HTML output without proper escaping, bypassing the security protections provided by Go's `html/template` package.
 

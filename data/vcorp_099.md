@@ -51,8 +51,6 @@ This vulnerability represents a severe client-side code injection flaw in Acme C
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A DOM-based Cross-Site Scripting (XSS) vulnerability has been identified in Acme Corp's Single Page Application built with React and vanilla JavaScript. The vulnerability exists in the dynamic content handler that processes URL query parameters.
 

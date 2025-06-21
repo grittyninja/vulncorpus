@@ -47,8 +47,6 @@ This vulnerability involves a path traversal issue in Acme Corp's NGINX server c
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-
 # Description
 A path traversal vulnerability exists in Acme Corp's public-facing NGINX server (running on Ubuntu 20.04 LTS with a PHP-FPM backend) due to a misconfiguration in the static file handling. The `alias` directive in the `location` block is defined without a trailing slash, which inadvertently enables directory traversal attacks:
 

@@ -64,8 +64,6 @@ This vulnerability involves an RSA private key for JWT authentication being hard
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A critical security vulnerability has been identified in Acme Corp's Node.js web application during static code analysis. An RSA private key used for JWT (JSON Web Token) authentication has been hardcoded directly in a configuration file (`config.js`) and committed to the production Git repository.
 

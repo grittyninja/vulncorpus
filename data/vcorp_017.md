@@ -73,8 +73,6 @@ This vulnerability involves a classic XML External Entity (XXE) injection flaw i
    - Integrity (I): Low (L) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L
-
 # Description
 An XML External Entity (XXE) vulnerability exists in Acme Corp's ASP.NET Core application due to improper configuration of the built-in XML parser. The application's XML processing module accepts user-provided XML through an API endpoint but fails to disable Document Type Definition (DTD) processing, creating a significant security risk.
 

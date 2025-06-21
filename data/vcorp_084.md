@@ -72,8 +72,6 @@ This vulnerability involves an LDAP injection issue in Acme Corp's Java-based HR
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 An LDAP injection vulnerability has been identified in Acme Corp's Java-based HR management system that uses Spring Boot. The vulnerability is located in the user search module, specifically in the `LdapUserSearch.searchUser()` method. The code directly concatenates unsanitized user input from HTTP request parameters into an LDAP query filter without proper validation or encoding.
 

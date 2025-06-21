@@ -49,8 +49,6 @@ This vulnerability exists in Acme Corp's legacy AngularJS (v1.6.8) application d
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:N
-
 # Description
 A significant cross-site scripting (XSS) vulnerability has been identified in Acme Corp's legacy AngularJS (v1.6.8) application due to the deliberate disabling of Angular's built-in Strict Contextual Escaping (SCE) protection mechanism in the application's core configuration. SCE is a crucial security feature in AngularJS that automatically sanitizes potentially dangerous content before rendering it in the browser, thus preventing XSS attacks.
 

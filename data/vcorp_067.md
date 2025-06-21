@@ -87,8 +87,6 @@ This vulnerability involves direct concatenation of untrusted HTTP parameters in
    - Integrity (I): None (N) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L
-
 # Description
 A critical SQL injection vulnerability exists in Acme Corp's user management API written in Go. The vulnerability is present in the `/search` endpoint's handler function, where untrusted user input from the `username` query parameter is directly concatenated into a SQL query using string formatting (`fmt.Sprintf`) without proper sanitization or parameterization.
 

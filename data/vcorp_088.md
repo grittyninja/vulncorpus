@@ -63,8 +63,6 @@ This vulnerability involves an improperly configured XML parser in Acme Corp's J
    - Integrity (I): None (N) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:L
-
 # Description
 An XML External Entity (XXE) vulnerability has been identified in Acme Corp's Java-based processing service. The vulnerability exists in the XML parsing functionality where the `DocumentBuilderFactory` is configured with default settings that enable DOCTYPE declarations, allowing for XXE attacks.
 

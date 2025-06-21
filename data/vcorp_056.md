@@ -67,8 +67,6 @@ This vulnerability involves the absence of the HttpOnly flag on session cookies 
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A security vulnerability has been identified in Acme Corp's Go-based web application where session cookies issued by the authentication service are missing the `HttpOnly` flag. This was discovered during a code review, which found that the flag was specifically commented out in the cookie creation code.
 

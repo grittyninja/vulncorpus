@@ -85,8 +85,6 @@ This is a severe NoSQL injection vulnerability in Acme Corp's Golang backend ser
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A critical NoSQL injection vulnerability has been identified in Acme Corp's backend services built with Golang and MongoDB. The vulnerability exists in the `FindUser` API endpoint which accepts user input via the `search` query parameter and directly converts it into a MongoDB query without proper validation or sanitization.
 

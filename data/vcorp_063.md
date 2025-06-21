@@ -86,8 +86,6 @@ This vulnerability involves a Go-based microservice that accepts user input to c
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N
-
 # Description
 A critical Server-Side Request Forgery (SSRF) vulnerability was discovered in Acme Corp's Go-based microservice deployed on Kubernetes. The vulnerability exists in the `/fetch` endpoint, which accepts a user-supplied `url_host` parameter and directly incorporates it into constructing a URL for an outbound HTTP request without any validation.
 

@@ -59,8 +59,6 @@ This vulnerability involves the improper handling of unsanitized user input in N
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-
 # Description
 A header injection vulnerability exists in Acme Corp's NGINX configuration that handles dynamic URL path parameters. The implementation directly injects unsanitized variables captured from the path into HTTP response headers, without checking for whitespace or newline characters.
 

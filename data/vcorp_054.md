@@ -71,8 +71,6 @@ This vulnerability involves the explicit configuration of deprecated and weak TL
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N
-
 # Description
 A security vulnerability has been identified in Acme Corp's microservices infrastructure where Go applications (version 1.16) have been explicitly configured to use deprecated and insecure TLS cipher suites, most notably `tls.TLS_RSA_WITH_RC4_128_SHA`. Additionally, the TLS minimum version has been set to 1.0, which is considered obsolete by modern security standards.
 

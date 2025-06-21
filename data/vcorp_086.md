@@ -54,8 +54,6 @@ This vulnerability involves an unvalidated redirection flaw in Acme Corp's Java-
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 An unvalidated redirect vulnerability exists in Acme Corp's Java-based web application, specifically in a Spring Boot controller endpoint that handles redirection to user-supplied destination URLs. When a request is made to the `/redirect` endpoint with a `destination` parameter, the application performs a redirect to the specified URL without any validation or filtering.
 

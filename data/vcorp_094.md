@@ -56,8 +56,6 @@ This vulnerability involves an Angular controller directly assigning user-provid
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-
 # Description
 An open redirect vulnerability exists in Acme Corp's AngularJS web application. The vulnerability is located in the RedirectController, which handles URL redirections. The controller takes a user-supplied parameter (`redirectUrl`) from the route parameters and directly assigns it to `$window.location.href` without performing any validation or sanitization.
 

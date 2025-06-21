@@ -75,8 +75,6 @@ This vulnerability involves the use of unencrypted Java sockets (`java.net.Socke
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A serious cryptographic vulnerability has been identified in Acme Corp's Java-based microservices deployed on Apache Tomcat (Java 11), where sensitive network communications are implemented using unencrypted `java.net.Socket` connections instead of secure alternatives.
 

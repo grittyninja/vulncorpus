@@ -51,8 +51,6 @@ This vulnerability stems from a critical security misconfiguration in Acme Corp'
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A security vulnerability has been identified in Acme Corp's containerized microservices, specifically in a critical Docker image used for a Node.js web server. The Dockerfile omits the `USER` directive, resulting in all container processes running with root privileges. This misconfiguration violates the principle of least privilege and creates significant security risks.
 

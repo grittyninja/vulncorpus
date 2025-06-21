@@ -64,8 +64,6 @@ This vulnerability involves a classic SQL injection flaw in Acme Corp's microser
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical SQL injection vulnerability has been discovered in Acme Corp's microservices API, specifically within a gRPC endpoint implemented in C# using .NET Core and Entity Framework. The vulnerability exists because untrusted user input received from gRPC requests is directly concatenated into a raw SQL query without proper sanitization, bypassing the ORM's built-in query parameterization protection.
 

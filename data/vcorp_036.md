@@ -76,9 +76,6 @@ This vulnerability involves direct injection of untrusted user input into MongoD
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
 
 # Description
 A high-severity NoSQL Injection vulnerability exists in Acme Corp's user management API built with the Go Gin framework and MongoDB. The vulnerability occurs in the `/user` endpoint where user-supplied query parameters are directly incorporated into MongoDB query filters without proper validation or sanitization.

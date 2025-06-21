@@ -51,8 +51,6 @@ This vulnerability involves an improper Nginx configuration that fails to enforc
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N
-
 # Description
 An insecure redirect vulnerability exists in Acme Corp's Nginx configuration (version 1.18) running in Docker containers on AWS EC2. The configuration fails to specify the HTTPS scheme when redirecting users from the `/old-ui` path, causing the web server to maintain the original protocol used by the client.
 

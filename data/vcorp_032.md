@@ -64,8 +64,6 @@ This vulnerability involves the exposure of a JWT (JSON Web Token) secret direct
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A hard-coded JWT secret was discovered in Acme Corp's Node.js/Express web application's configuration file. This secret was inadvertently committed to the production repository despite being initially intended for internal testing purposes. The secret is used to sign JSON Web Tokens for user authentication and session management.
 

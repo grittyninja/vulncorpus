@@ -82,8 +82,6 @@ This vulnerability involves the direct concatenation of untrusted user input int
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:L
-
 # Description
 A critical LDAP injection vulnerability exists in Acme Corp's C++ LDAP authentication module. The vulnerability occurs when untrusted user input is directly concatenated into LDAP distinguished names (DN) without proper escaping or sanitization.
 

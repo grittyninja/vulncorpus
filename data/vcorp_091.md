@@ -91,8 +91,6 @@ This vulnerability involves unsanitized user input being directly incorporated i
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N
-
 # Description
 An LDAP injection vulnerability has been identified in Acme Corp's Java-based web application running on Apache Tomcat with Active Directory integration. The vulnerability exists in the `UserSearchServlet` class where the application directly incorporates an unsanitized HTTP request parameter (`uid`) into an LDAP search filter without proper validation or escaping.
 

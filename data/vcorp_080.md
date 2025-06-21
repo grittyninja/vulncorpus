@@ -68,8 +68,6 @@ This vulnerability involves the use of the cryptographically broken MD5 hash alg
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N
-
 # Description
 Acme Corp's Java application contains a critical security vulnerability in its authentication system, where the MD5 hash algorithm is used for generating cryptographic signatures for authentication tokens. MD5 is cryptographically broken and lacks collision resistance, which means attackers can potentially generate different inputs that produce identical hash values.
 

@@ -61,8 +61,6 @@ This vulnerability involves a classic path traversal issue in Acme Corp's .NET C
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability exists in Acme Corp's microservice named "file-taint-grpc" implemented with .NET Core and gRPC. The vulnerability occurs in the `ReadFile` method which accepts a file name via gRPC call and directly concatenates it to a base directory path without proper validation or sanitization.
 

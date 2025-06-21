@@ -71,8 +71,6 @@ This vulnerability involves a path traversal weakness in Acme Corp's Go-based mi
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A path traversal vulnerability has been identified in Acme Corp's Go-based microservice API built using the Gin framework. The vulnerable endpoint (`/file`) accepts a filename via a query parameter and uses it to construct a file path without proper validation. Although the code attempts to sanitize the input using `filepath.Clean()`, this function only normalizes paths and does not prevent directory traversal attacks.
 

@@ -68,8 +68,6 @@ This vulnerability involves a critical configuration issue in the ASP.NET Core A
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H
-
 # Description
 A critical insecure deserialization vulnerability has been identified in Acme Corp's ASP.NET Core API which uses Newtonsoft.Json with the dangerous `TypeNameHandling.All` configuration without implementing a custom `SerializationBinder`. This misconfiguration allows attackers to supply JSON payloads containing arbitrary type specifications that can lead to instantiation of dangerous types during deserialization.
 

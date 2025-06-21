@@ -56,8 +56,6 @@ This vulnerability involves a client-side DOM-based XSS in Acme Corp's single-pa
    - Integrity (I): Low (L) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
-
 # Description
 A DOM-based Cross-Site Scripting (XSS) vulnerability has been discovered in Acme Corp's single-page JavaScript application. The application extracts the "default" query parameter from the URL and directly injects it into the page's DOM without proper sanitization or validation.
 

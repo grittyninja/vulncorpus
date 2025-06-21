@@ -58,8 +58,6 @@ This vulnerability involves a critical authentication bypass in Acme Corp's Java
    - Integrity (I): High (H) 
    - Availability (A): Low (L) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:L
-
 # Description
 A critical authentication vulnerability exists in Acme Corp's Java-based authentication service that allows complete bypass of JWT verification. The vulnerability stems from the explicit use of the "none" algorithm (`Algorithm.none()`) in the JWT verification process, which effectively disables signature validation.
 

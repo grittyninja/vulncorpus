@@ -68,8 +68,6 @@ This vulnerability involves the use of Java's `NullCipher` in Acme Corp's authen
    - Integrity (I): None (N) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N
-
 # Description
 A critical cryptographic vulnerability exists in Acme Corp's Java-based authentication microservice where the application implements `javax.crypto.Cipher.getInstance("NullCipher")` instead of a secure encryption algorithm. The `NullCipher` is a non-encrypting cipher implementation that simply passes data through unchanged, providing zero cryptographic protection despite being used to process sensitive information including identity card data.
 

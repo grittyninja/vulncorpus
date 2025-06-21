@@ -60,8 +60,6 @@ This vulnerability involves the generation of RSA keys with insufficient bit len
    - Integrity (I): High (H) 
    - Availability (A): None (N) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N
-
 # Description
 A security vulnerability exists in Acme Corp's payment processing microservice where Java components are generating RSA key pairs with a length of 1024 bits, well below the NIST-recommended minimum of 2048 bits. This issue was identified during a security audit through static code review of the payment processing module deployed on Apache Tomcat using Java (JDK 11).
 

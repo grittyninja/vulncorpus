@@ -71,8 +71,6 @@ This vulnerability represents a severe OS command injection flaw in a Go microse
    - Integrity (I): High (H) 
    - Availability (A): High (H) 
 
-CVSS Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-
 # Description
 A critical command injection vulnerability has been discovered in Acme Corp's Go-based microservices utilizing the Gorilla Mux framework. The application exposes an HTTP endpoint (`/run`) that accepts a query parameter (`cmd`) and directly passes this user-controlled input to the operating system for execution via Go's `exec.Command` function with a bash shell interpreter.
 
