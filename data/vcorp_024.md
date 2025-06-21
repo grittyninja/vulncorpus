@@ -1,7 +1,7 @@
 # Path Traversal via NGINX Alias Directive Misconfiguration
 
 # Vulnerability Case
-During an audit of Acme Corp’s public-facing NGINX server (running on Ubuntu 20.04 LTS with a PHP-FPM backend), a misconfiguration was identified in the server’s static file handling. The `alias` directive in the `location` block was defined without a trailing slash, which inadvertently enables path traversal via URL manipulation. This finding was uncovered during manual configuration review and cross-referenced with abnormal access logs, where specially crafted HTTP requests exploited the vulnerability. Attackers could append encoded relative paths to legitimate endpoints, potentially accessing files outside the intended directory and exposing sensitive configuration or data.
+During an audit of Acme Corp's public-facing NGINX server (running on Ubuntu 20.04 LTS with a PHP-FPM backend), a misconfiguration was identified in the server's static file handling. The `alias` directive in the `location` block was defined without a trailing slash, which inadvertently enables path traversal via URL manipulation. This finding was uncovered during manual configuration review and cross-referenced with abnormal access logs, where specially crafted HTTP requests exploited the vulnerability. Attackers could append encoded relative paths to legitimate endpoints, potentially accessing files outside the intended directory and exposing sensitive configuration or data.
 
 ```nginx
 location /static {

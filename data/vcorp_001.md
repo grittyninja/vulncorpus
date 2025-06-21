@@ -1,12 +1,12 @@
 # Remote Command Injection via Insecure Eval
 
 # Vulnerability Case
-During our routine vulnerability assessment of Acme Corp’s automated deployment scripts, we discovered a critical flaw in a bash script that directly evaluates data fetched from a configuration server via an unencrypted `curl` command. The vulnerable code invokes the `eval` function on the server’s response without proper integrity checks, enabling attackers to inject arbitrary commands through:  
+During our routine vulnerability assessment of Acme Corp's automated deployment scripts, we discovered a critical flaw in a bash script that directly evaluates data fetched from a configuration server via an unencrypted `curl` command. The vulnerable code invokes the `eval` function on the server's response without proper integrity checks, enabling attackers to inject arbitrary commands through:  
 1) Compromise of the configuration server,  
 2) Man-in-the-Middle (MITM) attacks on the unsecured HTTP connection, or  
 3) DNS spoofing to redirect requests to malicious servers.  
 
-This discovery was made while auditing the CI/CD pipeline where deployment scripts are executed on a Linux environment utilizing Bash (v5.0) and Curl (v7.68.0). If exploited, this vulnerability could allow adversaries to execute commands with the script’s privileges (potentially elevated), leading to remote code execution, lateral movement, and full system compromise. Given the script’s integration with Acme Corp’s critical infrastructure and the adjacent-network attack vector (CVSSv3.1 AV:A), the risk to business operations is critical.  
+This discovery was made while auditing the CI/CD pipeline where deployment scripts are executed on a Linux environment utilizing Bash (v5.0) and Curl (v7.68.0). If exploited, this vulnerability could allow adversaries to execute commands with the script's privileges (potentially elevated), leading to remote code execution, lateral movement, and full system compromise. Given the script's integration with Acme Corp's critical infrastructure and the adjacent-network attack vector (CVSSv3.1 AV:A), the risk to business operations is critical.  
 
 ```bash
 #!/bin/bash

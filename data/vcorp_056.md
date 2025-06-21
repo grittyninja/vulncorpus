@@ -1,7 +1,7 @@
 # Missing HttpOnly Flag in Session Cookies
 
 # Vulnerability Case
-During the security audit of Acme Corp's Go-based web application, our team discovered that session cookies issued by the authentication service were missing the `HttpOnly` flag. This vulnerability was identified by reviewing the source code handling cookies via Go’s `net/http` package, where the flag was inadvertently omitted during cookie creation. The absence of the `HttpOnly` attribute allows client-side scripts to access sensitive session data, thereby substantially increasing the risk of cross-site scripting (XSS) exploitation. Given the critical role of the session token in user authentication, this misconfiguration could facilitate session hijacking and unauthorized access to user accounts in a production environment using a Linux-based server infrastructure behind NGINX.
+During the security audit of Acme Corp's Go-based web application, our team discovered that session cookies issued by the authentication service were missing the `HttpOnly` flag. This vulnerability was identified by reviewing the source code handling cookies via Go's `net/http` package, where the flag was inadvertently omitted during cookie creation. The absence of the `HttpOnly` attribute allows client-side scripts to access sensitive session data, thereby substantially increasing the risk of cross-site scripting (XSS) exploitation. Given the critical role of the session token in user authentication, this misconfiguration could facilitate session hijacking and unauthorized access to user accounts in a production environment using a Linux-based server infrastructure behind NGINX.
 
 ```go
 package main

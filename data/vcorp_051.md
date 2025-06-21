@@ -1,7 +1,7 @@
 # JWT None Algorithm Vulnerability in Go API Services
 
 # Vulnerability Case
-During a security assessment of Acme Corp's Go-based API services, we discovered that the application’s JWT validation logic was inadvertently configured to accept tokens signed with the `none` algorithm. Our analysis revealed that the implementation leverages the `jwt-go` library without explicitly enforcing algorithm restrictions, allowing crafted tokens to bypass signature verification. Verification was achieved by constructing a JWT token with a header indicating `alg": "none"`, which the vulnerable service accepted as valid. This vulnerability, detected through both static analysis and dynamic testing, exposes the system to unauthorized access through forged tokens.
+During a security assessment of Acme Corp's Go-based API services, we discovered that the application's JWT validation logic was inadvertently configured to accept tokens signed with the `none` algorithm. Our analysis revealed that the implementation leverages the `jwt-go` library without explicitly enforcing algorithm restrictions, allowing crafted tokens to bypass signature verification. Verification was achieved by constructing a JWT token with a header indicating `alg": "none"`, which the vulnerable service accepted as valid. This vulnerability, detected through both static analysis and dynamic testing, exposes the system to unauthorized access through forged tokens.
 
 ```go
 package main

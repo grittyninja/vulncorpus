@@ -1,7 +1,7 @@
 # Path Traversal due to Improper Filepath Sanitization
 
 # Vulnerability Case
-During the code review of Acme Corp's Golang-based file server, we discovered that the application incorrectly uses Go’s `filepath.Clean` function to sanitize file path inputs from HTTP requests. Although `Clean` is designed to consolidate path elements into the shortest equivalent form, it does not filter out directory traversal patterns, leaving the server susceptible to unauthorized file access. The flaw was identified when mapping request URLs to filesystem paths in the file-serving endpoint, where malicious input such as `../../etc/passwd` could be normalized but still traverse directories. This vulnerability was found in a real-world stack using Go’s standard libraries (`net/http`, `filepath`, and `strings`), a common pattern in microservice architectures.
+During the code review of Acme Corp's Golang-based file server, we discovered that the application incorrectly uses Go's `filepath.Clean` function to sanitize file path inputs from HTTP requests. Although `Clean` is designed to consolidate path elements into the shortest equivalent form, it does not filter out directory traversal patterns, leaving the server susceptible to unauthorized file access. The flaw was identified when mapping request URLs to filesystem paths in the file-serving endpoint, where malicious input such as `../../etc/passwd` could be normalized but still traverse directories. This vulnerability was found in a real-world stack using Go's standard libraries (`net/http`, `filepath`, and `strings`), a common pattern in microservice architectures.
 
 ```go
 package main

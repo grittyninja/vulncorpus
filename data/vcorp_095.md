@@ -1,7 +1,7 @@
 # Cross-Site Scripting (XSS) via Disabled AngularJS Strict Contextual Escaping
 
 # Vulnerability Case
-During an internal code review of Acme Corp's legacy AngularJS application, our security assessment uncovered that the application configuration explicitly disabled AngularJS's Strict Contextual Escaping (SCE) by setting the `$sceProvider` to false. This configuration was found in the critical configuration module of an AngularJS (v1.6.8) frontend, combined with a Node.js/Express backend, and it bypasses AngularJS’s built-in output sanitization. The discovery was made while auditing client-side security controls and verifying that dynamic content was not being properly sanitized before being rendered in the browser. Disabling SCE increases the risk of cross-site scripting (XSS) as unsanitized user input could be injected into the DOM.
+During an internal code review of Acme Corp's legacy AngularJS application, our security assessment uncovered that the application configuration explicitly disabled AngularJS's Strict Contextual Escaping (SCE) by setting the `$sceProvider` to false. This configuration was found in the critical configuration module of an AngularJS (v1.6.8) frontend, combined with a Node.js/Express backend, and it bypasses AngularJS's built-in output sanitization. The discovery was made while auditing client-side security controls and verifying that dynamic content was not being properly sanitized before being rendered in the browser. Disabling SCE increases the risk of cross-site scripting (XSS) as unsanitized user input could be injected into the DOM.
 
 ```javascript
 // File: app.config.js

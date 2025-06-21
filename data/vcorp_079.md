@@ -1,7 +1,7 @@
 # Cleartext Transmission of Sensitive Data Over Unencrypted Socket
 
 # Vulnerability Case
-During a routine security audit of Acme Corp’s Java-based microservices deployed on Apache Tomcat (running on Java 11), our team discovered that certain network communications were implemented using `java.net.Socket` without encryption. The issue was identified by analyzing source code and network traffic logs, where cleartext transmissions were observed for sensitive API calls. This insecure pattern exposes confidential data to interception and tampering by an attacker with network access, potentially enabling man-in-the-middle (MitM) exploitation.
+During a routine security audit of Acme Corp's Java-based microservices deployed on Apache Tomcat (running on Java 11), our team discovered that certain network communications were implemented using `java.net.Socket` without encryption. The issue was identified by analyzing source code and network traffic logs, where cleartext transmissions were observed for sensitive API calls. This insecure pattern exposes confidential data to interception and tampering by an attacker with network access, potentially enabling man-in-the-middle (MitM) exploitation.
 
 ```java
 import java.io.BufferedReader;

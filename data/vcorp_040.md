@@ -1,7 +1,7 @@
 # Command Injection in Go Microservice via Unsanitized Query Parameters
 
 # Vulnerability Case
-During the vulnerability assessment of Acme Corp's microservices written in Go and utilizing the Gorilla Mux framework, we discovered a command injection vulnerability when reviewing the HTTP endpoint logs and source code. The application directly incorporates untrusted query parameters into OS commands executed via Go’s `exec.Command` function without proper sanitization. This flaw allows an attacker to inject arbitrary shell commands by exploiting the `/run` endpoint. Our review indicated that the issue was present in components deployed on Linux-based environments, placing critical production systems at risk.
+During the vulnerability assessment of Acme Corp's microservices written in Go and utilizing the Gorilla Mux framework, we discovered a command injection vulnerability when reviewing the HTTP endpoint logs and source code. The application directly incorporates untrusted query parameters into OS commands executed via Go's `exec.Command` function without proper sanitization. This flaw allows an attacker to inject arbitrary shell commands by exploiting the `/run` endpoint. Our review indicated that the issue was present in components deployed on Linux-based environments, placing critical production systems at risk.
 
 ```go
 package main
