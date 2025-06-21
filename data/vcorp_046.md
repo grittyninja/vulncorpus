@@ -1,7 +1,7 @@
 # Cross-Site Scripting (XSS) in Go Web Application
 
 # Vulnerability Case
-During a targeted security assessment of Acme Corp's Go-based web application, we discovered an XSS vulnerability within an endpoint built using the Gorilla mux router. The issue was identified when untrusted user input from query parameters was directly concatenated into the HTTP response via Go’s ResponseWriter without proper sanitization. During manual and automated testing, crafted payloads containing malicious JavaScript were successfully rendered by the client browser, confirming the vulnerability. This flaw was found in a module handling user-supplied data in an environment that leverages the Gorilla web toolkit, indicative of a critical risk to user session integrity.
+During a targeted security assessment of Acme Corp's Go-based web application, we discovered an XSS vulnerability within an endpoint built using the Gorilla mux router. The issue was identified when untrusted user input from query parameters was directly concatenated into the HTTP response via Go's ResponseWriter without proper sanitization. During manual and automated testing, crafted payloads containing malicious JavaScript were successfully rendered by the client browser, confirming the vulnerability. This flaw was found in a module handling user-supplied data in an environment that leverages the Gorilla web toolkit, indicative of a critical risk to user session integrity.
 
 ```go
 package main
@@ -26,7 +26,7 @@ func main() {
 }
 ```
 
-Exploitation of this vulnerability involves injecting malicious JavaScript (e.g., using `<script>` tags) into the unvalidated user input, which is then rendered in the victim’s browser. An attacker can craft a URL with a malicious payload that, when visited, executes arbitrary scripting code, potentially stealing session cookies or performing actions on behalf of the user. Given that the application is part of Acme Corp's critical infrastructure—built using Go and the Gorilla stack—the exploitation could lead to severe business impacts, including unauthorized account access, data leakage, and damage to the company’s reputation.
+Exploitation of this vulnerability involves injecting malicious JavaScript (e.g., using `<script>` tags) into the unvalidated user input, which is then rendered in the victim's browser. An attacker can craft a URL with a malicious payload that, when visited, executes arbitrary scripting code, potentially stealing session cookies or performing actions on behalf of the user. Given that the application is part of Acme Corp's critical infrastructure—built using Go and the Gorilla stack—the exploitation could lead to severe business impacts, including unauthorized account access, data leakage, and damage to the company's reputation.
 
 
 context: go.gorilla.xss.gorilla-no-direct-write-to-responsewriter-traint.gorilla-no-direct-write-to-responsewriter-taint Untrusted input could be used to tamper with a web page rendering, which can lead to a Cross-site scripting (XSS) vulnerability. XSS vulnerabilities occur when untrusted input executes malicious JavaScript code, leading to issues such as account compromise and sensitive information leakage. To prevent this vulnerability, validate the user input, perform contextual output encoding or sanitize the input. For more information, see: [Go XSS prevention](https://semgrep.dev/docs/cheat-sheets/go-xss/).

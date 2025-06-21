@@ -1,7 +1,7 @@
 # Command Injection in gRPC Service Requiring VPN Access
 
 # Vulnerability Case
-During our assessment of Acme Corp’s microservices architecture, we discovered that a .NET Core-based gRPC service responsible for executing OS commands was vulnerable to command injection. Analysis of the service's source code revealed that user-supplied input from gRPC requests was directly concatenated into a shell command without proper validation or sanitization. This issue was uncovered during routine source code reviews and dynamic testing of the service endpoints. The vulnerable component is built with C# on the .NET Core framework and deployed on Linux-based servers in a containerized environment. An attacker inside internal network (requires vpn access) could exploit this flaw to execute arbitrary commands, potentially leading to total system compromise.
+During our assessment of Acme Corp's microservices architecture, we discovered that a .NET Core-based gRPC service responsible for executing OS commands was vulnerable to command injection. Analysis of the service's source code revealed that user-supplied input from gRPC requests was directly concatenated into a shell command without proper validation or sanitization. This issue was uncovered during routine source code reviews and dynamic testing of the service endpoints. The vulnerable component is built with C# on the .NET Core framework and deployed on Linux-based servers in a containerized environment. An attacker inside internal network (requires vpn access) could exploit this flaw to execute arbitrary commands, potentially leading to total system compromise.
 
 ```csharp
 using System;

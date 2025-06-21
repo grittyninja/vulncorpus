@@ -1,7 +1,7 @@
 # Hardcoded Database Credentials in Application Configuration
 
 # Vulnerability Case
-During a routine audit of Acme Corp’s code repositories and CI/CD pipeline, our automated secrets scanning tool flagged a generic high-entropy string pattern within a legacy configuration file of a Node.js application. The detected generic secret was found in a configuration file that managed database access credentials, indicating potential exposure of sensitive internal authentication data. This vulnerability was discovered after correlating scan alerts with repository commit histories during a scheduled vulnerability assessment. The presence of such hardcoded secrets in source code increases the risk of unauthorized access if the repository content is exposed or inadvertently shared. The finding underscores weaknesses in secret management practices within the development lifecycle.
+During a routine audit of Acme Corp's code repositories and CI/CD pipeline, our automated secrets scanning tool flagged a generic high-entropy string pattern within a legacy configuration file of a Node.js application. The detected generic secret was found in a configuration file that managed database access credentials, indicating potential exposure of sensitive internal authentication data. This vulnerability was discovered after correlating scan alerts with repository commit histories during a scheduled vulnerability assessment. The presence of such hardcoded secrets in source code increases the risk of unauthorized access if the repository content is exposed or inadvertently shared. The finding underscores weaknesses in secret management practices within the development lifecycle.
 
 ```javascript
 // config.js - Acme Corp Node.js Application Configuration
@@ -13,7 +13,7 @@ module.exports = {
 };
 ```
 
-Attackers can leverage automated scanning tools to identify repositories containing hardcoded secrets like `GENERIC_SECRET_EXPOSED` and may attempt to use these credentials to gain unauthorized access to internal databases or other critical services hosted on Acme Corp’s infrastructure. Exploitation may involve lateral movement in network environments, data exfiltration, and privilege escalation, especially if other services are configured to trust the authenticated requests from the compromised secret. The business impact could be significant, resulting in data breaches, service disruption, financial losses, and damage to corporate reputation, in addition to potential regulatory and compliance repercussions.
+Attackers can leverage automated scanning tools to identify repositories containing hardcoded secrets like `GENERIC_SECRET_EXPOSED` and may attempt to use these credentials to gain unauthorized access to internal databases or other critical services hosted on Acme Corp's infrastructure. Exploitation may involve lateral movement in network environments, data exfiltration, and privilege escalation, especially if other services are configured to trust the authenticated requests from the compromised secret. The business impact could be significant, resulting in data breaches, service disruption, financial losses, and damage to corporate reputation, in addition to potential regulatory and compliance repercussions.
 
 
 context: generic.secrets.security.detected-generic-secret.detected-generic-secret Generic Secret detected

@@ -18,7 +18,7 @@ function handleRedirect() {
 }
 ```
 
-The vulnerability arises from the absence of input validation, allowing an attacker to supply a malicious value to `$PROP`. By injecting a JavaScript URI (e.g., `javascript:alert('XSS')`), an adversary can trigger Cross-Site Scripting, executing arbitrary code in the context of the victim’s browser. Alternatively, supplying an external URL facilitates an open-redirect that can be leveraged for phishing, credential theft, or session hijacking. This exploitation pathway poses severe business risks by undermining user trust and potentially serving as a precursor to more advanced attacks within the enterprise environment.
+The vulnerability arises from the absence of input validation, allowing an attacker to supply a malicious value to `$PROP`. By injecting a JavaScript URI (e.g., `javascript:alert('XSS')`), an adversary can trigger Cross-Site Scripting, executing arbitrary code in the context of the victim's browser. Alternatively, supplying an external URL facilitates an open-redirect that can be leveraged for phishing, credential theft, or session hijacking. This exploitation pathway poses severe business risks by undermining user trust and potentially serving as a precursor to more advanced attacks within the enterprise environment.
 
 
 context: javascript.browser.security.open-redirect.js-open-redirect The application accepts potentially user-controlled input `$PROP` which can control the location of the current window context. This can lead two types of vulnerabilities open-redirection and Cross-Site-Scripting (XSS) with JavaScript URIs. It is recommended to validate user-controllable input before allowing it to control the redirection.

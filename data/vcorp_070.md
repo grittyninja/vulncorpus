@@ -1,7 +1,7 @@
 # Exported Android Activity Exposes Administrative Control Functions
 
 # Vulnerability Case
-During the security assessment of Acme Corp's Android mobile application, we identified a critical exported activity that inadvertently exposes internal control functions. The vulnerability was discovered during static analysis of the AndroidManifest.xml file and confirmed through dynamic testing by sending crafted intents to the exposed activity. The activity, intended for privileged administrative use, lacks proper permission checks which allows any application on the device to launch it, potentially manipulating key configuration parameters or sensitive data. Exploiting this flaw can compromise the application’s control plane, leading to unauthorized administrative actions and severe data integrity issues.
+During the security assessment of Acme Corp's Android mobile application, we identified a critical exported activity that inadvertently exposes internal control functions. The vulnerability was discovered during static analysis of the AndroidManifest.xml file and confirmed through dynamic testing by sending crafted intents to the exposed activity. The activity, intended for privileged administrative use, lacks proper permission checks which allows any application on the device to launch it, potentially manipulating key configuration parameters or sensitive data. Exploiting this flaw can compromise the application's control plane, leading to unauthorized administrative actions and severe data integrity issues.
 
 ```xml
 <!-- AndroidManifest.xml -->

@@ -1,7 +1,7 @@
 # Insufficient RSA Key Length in Payment Processing Module
 
 # Vulnerability Case
-During our security audit of Acme Corp’s microservices architecture, we identified that several Java components were generating RSA keys with a length of 1024 bits instead of the NIST-recommended minimum of 2048 bits. A static code review of the payment processing module—deployed on an Apache Tomcat server using a Java (JDK 11) stack—revealed that the cryptographic routines relied on weak key material. This vulnerability was discovered upon analyzing the key generation routines during integration testing, where logs confirmed the use of suboptimal parameters in key pair generation. Consequently, this misconfiguration exposes the system to potential cryptanalytic attacks, potentially allowing an adversary with sufficient resources to factor the weak RSA keys and undermine the integrity of secure communications.
+During our security audit of Acme Corp's microservices architecture, we identified that several Java components were generating RSA keys with a length of 1024 bits instead of the NIST-recommended minimum of 2048 bits. A static code review of the payment processing module—deployed on an Apache Tomcat server using a Java (JDK 11) stack—revealed that the cryptographic routines relied on weak key material. This vulnerability was discovered upon analyzing the key generation routines during integration testing, where logs confirmed the use of suboptimal parameters in key pair generation. Consequently, this misconfiguration exposes the system to potential cryptanalytic attacks, potentially allowing an adversary with sufficient resources to factor the weak RSA keys and undermine the integrity of secure communications.
 
 ```java
 import java.security.KeyPair;

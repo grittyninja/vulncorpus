@@ -1,7 +1,7 @@
 # Reflected Cross-Site Scripting (XSS) in Java Servlet
 
 # Vulnerability Case
-During the security assessment of Acme Corp’s legacy Java web application, we identified an instance where unsanitized user input was sent directly to the HTTP response via a `PrintWriter` without the mediation of a view technology like JavaServer Faces (JSF). This discovery was made after reviewing the audit logs that flagged direct writes to a `Writer` object, indicating that user-supplied data bypassed standard HTML escaping mechanisms. The issue was traced to a servlet running on an Apache Tomcat server with legacy Struts integrations, where raw request parameters were concatenated into HTML responses. Such behavior creates a Reflected Cross-Site Scripting (XSS) risk, potentially enabling attackers to inject custom scripts into the browser context.
+During the security assessment of Acme Corp's legacy Java web application, we identified an instance where unsanitized user input was sent directly to the HTTP response via a `PrintWriter` without the mediation of a view technology like JavaServer Faces (JSF). This discovery was made after reviewing the audit logs that flagged direct writes to a `Writer` object, indicating that user-supplied data bypassed standard HTML escaping mechanisms. The issue was traced to a servlet running on an Apache Tomcat server with legacy Struts integrations, where raw request parameters were concatenated into HTML responses. Such behavior creates a Reflected Cross-Site Scripting (XSS) risk, potentially enabling attackers to inject custom scripts into the browser context.
 
 ```java
 @WebServlet("/greet")

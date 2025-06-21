@@ -40,7 +40,7 @@ namespace Acme.Grpc
 }
 ```
 
-The vulnerability arises from constructing the XPath query using direct string interpolation without proper sanitization, allowing an attacker to inject additional XPath syntax. Exploitation could occur if an adversary crafts an input such as `' or '1'='1` to bypass intended query filters and retrieve all nodes in the XML document. In a real-world scenario, this could lead to unauthorized disclosure of sensitive user data, potentially resulting in regulatory penalties, competitive disadvantage, and damage to the organization’s reputation.
+The vulnerability arises from constructing the XPath query using direct string interpolation without proper sanitization, allowing an attacker to inject additional XPath syntax. Exploitation could occur if an adversary crafts an input such as `' or '1'='1` to bypass intended query filters and retrieve all nodes in the XML document. In a real-world scenario, this could lead to unauthorized disclosure of sensitive user data, potentially resulting in regulatory penalties, competitive disadvantage, and damage to the organization's reputation.
 
 context: csharp.dotnet-core.xpath-injection.xpath-taint-grpc.xpath-taint-grpc XPath queries are constructed dynamically on user-controlled input. This could lead to XPath injection if variables passed into the evaluate or compile commands are not properly sanitized. Xpath injection could lead to unauthorized access to sensitive information in XML documents. Thoroughly sanitize user input or use parameterized XPath queries if you can.
 

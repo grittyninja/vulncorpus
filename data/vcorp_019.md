@@ -1,7 +1,7 @@
 # Insecure Deserialization Using BinaryFormatter
 
 # Vulnerability Case
-During our assessment of Acme Corp’s legacy .NET application, we discovered that data received over a public API endpoint is deserialized using the insecure `BinaryFormatter` without proper validation. The vulnerability was identified during a code audit of the Windows service that processes incoming binary data streams. This insecure deserialization exposes the application to attacks where an adversary could supply a crafted payload, leading to arbitrary code execution and privilege escalation on the backend server hosting the .NET Framework 4.7 environment on Azure.
+During our assessment of Acme Corp's legacy .NET application, we discovered that data received over a public API endpoint is deserialized using the insecure `BinaryFormatter` without proper validation. The vulnerability was identified during a code audit of the Windows service that processes incoming binary data streams. This insecure deserialization exposes the application to attacks where an adversary could supply a crafted payload, leading to arbitrary code execution and privilege escalation on the backend server hosting the .NET Framework 4.7 environment on Azure.
 
 ```csharp
 using System;
@@ -32,7 +32,7 @@ namespace InsecureDeserializationDemo
 }
 ```
 
-The insecure use of `BinaryFormatter` allows an attacker to inject a malicious payload that, when deserialized, can instantiate objects with unexpected behavior—potentially triggering methods like those in `IDeserializationCallback` or exploiting the object’s constructor logic. This exploitation could lead to remote code execution on the affected host, posing critical business risks such as unauthorized system access, data leakage, and disruption of service.
+The insecure use of `BinaryFormatter` allows an attacker to inject a malicious payload that, when deserialized, can instantiate objects with unexpected behavior—potentially triggering methods like those in `IDeserializationCallback` or exploiting the object's constructor logic. This exploitation could lead to remote code execution on the affected host, posing critical business risks such as unauthorized system access, data leakage, and disruption of service.
 
 context: csharp.lang.security.insecure-deserialization.binary-formatter.insecure-binaryformatter-deserialization The BinaryFormatter type is dangerous and is not recommended for data processing. Applications should stop using BinaryFormatter as soon as possible, even if they believe the data they're processing to be trustworthy. BinaryFormatter is insecure and can't be made secure
 

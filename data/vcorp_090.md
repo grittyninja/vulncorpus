@@ -1,7 +1,7 @@
 # XXE Vulnerability in Java XML Parser Configuration
 
 # Vulnerability Case
-During our assessment of Acme Corp's enterprise Java application, we identified that its XML parsing component, implemented with Java’s built-in parser (commonly used within frameworks like Spring Boot deployed on Apache Tomcat), was not securely configured. The parser neglected to disable external DTDs and entity resolution, allowing user-controlled XML inputs to process potentially malicious DTDs. This vulnerability was uncovered during source code analysis and confirmed by sending crafted XML payloads to an API endpoint that processes XML data. The lack of configuration safeguards renders the application susceptible to XML External Entity (XXE) attacks, which can cascade into more severe vulnerabilities such as LFI, SSRF, RCE, or even DoS via entity expansion.
+During our assessment of Acme Corp's enterprise Java application, we identified that its XML parsing component, implemented with Java's built-in parser (commonly used within frameworks like Spring Boot deployed on Apache Tomcat), was not securely configured. The parser neglected to disable external DTDs and entity resolution, allowing user-controlled XML inputs to process potentially malicious DTDs. This vulnerability was uncovered during source code analysis and confirmed by sending crafted XML payloads to an API endpoint that processes XML data. The lack of configuration safeguards renders the application susceptible to XML External Entity (XXE) attacks, which can cascade into more severe vulnerabilities such as LFI, SSRF, RCE, or even DoS via entity expansion.
 
 
 ```java

@@ -1,7 +1,7 @@
 # Docker Socket Mount Container Escape
 
 # Vulnerability Case
-During our assessment of Acme Corp's Docker container infrastructure, we identified a Dockerfile that mounts the host’s socket (i.e., `/var/run/docker.sock`) directly into the container. This configuration was discovered during a routine review of container images deployed in production and raises severe security concerns, as it effectively grants an attacker with container-level access the ability to control the host's Docker daemon. Such access allows for privilege escalation, enabling the execution of arbitrary commands on the host, potentially leading to lateral movement across the network. The following code snippet illustrates the vulnerable Dockerfile configuration common in containerized environments using Docker Engine 20.10 on a Linux host.
+During our assessment of Acme Corp's Docker container infrastructure, we identified a Dockerfile that mounts the host's socket (i.e., `/var/run/docker.sock`) directly into the container. This configuration was discovered during a routine review of container images deployed in production and raises severe security concerns, as it effectively grants an attacker with container-level access the ability to control the host's Docker daemon. Such access allows for privilege escalation, enabling the execution of arbitrary commands on the host, potentially leading to lateral movement across the network. The following code snippet illustrates the vulnerable Dockerfile configuration common in containerized environments using Docker Engine 20.10 on a Linux host.
 
 ```dockerfile
 FROM alpine:3.12
@@ -12,7 +12,7 @@ VOLUME ["/var/run/docker.sock:/var/run/docker.sock"]
 CMD ["sh"]
 ```
 
-When the `/var/run/docker.sock` is mounted inside the container, any process within the container can communicate with the host’s Docker daemon. An attacker with access to the container can exploit this by launching new containers with elevated privileges or directly invoking Docker API commands to manipulate the host system. This vulnerability compromises container isolation and can lead to full host takeover, resulting in significant business impact including unauthorized access to sensitive systems, data breaches, and potential disruption of critical services.
+When the `/var/run/docker.sock` is mounted inside the container, any process within the container can communicate with the host's Docker daemon. An attacker with access to the container can exploit this by launching new containers with elevated privileges or directly invoking Docker API commands to manipulate the host system. This vulnerability compromises container isolation and can lead to full host takeover, resulting in significant business impact including unauthorized access to sensitive systems, data breaches, and potential disruption of critical services.
 
 context: dockerfile.security.dockerd-socket-mount.dockerfile-dockerd-socket-mount The Dockerfile(image) mounts docker.sock to the container which may allow an attacker already inside of the container to escape container and execute arbitrary commands on the host machine.
 

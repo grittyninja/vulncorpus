@@ -23,7 +23,7 @@ func main() {
 }
 ```
 
-Exploitation of this vulnerability involves an adversary leveraging factorization techniques on the weak 1024-bit modulus, potentially reconstructing the private key. With the private key compromised, an attacker could forge digital signatures, impersonate legitimate services, or decrypt intercepted encrypted traffic. This not only undermines the confidentiality and integrity of Acme Corp’s secure communications but may also result in unauthorized access to sensitive data, severely impacting the organization's trust and compliance posture.
+Exploitation of this vulnerability involves an adversary leveraging factorization techniques on the weak 1024-bit modulus, potentially reconstructing the private key. With the private key compromised, an attacker could forge digital signatures, impersonate legitimate services, or decrypt intercepted encrypted traffic. This not only undermines the confidentiality and integrity of Acme Corp's secure communications but may also result in unauthorized access to sensitive data, severely impacting the organization's trust and compliance posture.
 
 
 context: go.lang.security.audit.crypto.use_of_weak_rsa_key.use-of-weak-rsa-key RSA keys should be at least 2048 bits

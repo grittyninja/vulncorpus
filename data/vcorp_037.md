@@ -1,7 +1,7 @@
 # Path Traversal in Go-Gin API Endpoint
 
 # Vulnerability Case
-During a comprehensive review of Acme Corp’s Go-based microservices deployed via the Gin framework, our team identified a path traversal vulnerability in an API endpoint that constructs file paths from unsanitized user input. The endpoint accepts a filename via a query parameter and utilizes Go’s native `filepath.Clean` function without ensuring that the resultant path remains confined to the designated directory. During dynamic testing, crafted input containing directory traversal sequences enabled access to files outside the expected file storage area. The issue was confirmed through taint analysis, where user-controlled data flowed directly into sensitive file operations. This vulnerability exposes the system to unauthorized file disclosure, directly impacting data confidentiality.
+During a comprehensive review of Acme Corp's Go-based microservices deployed via the Gin framework, our team identified a path traversal vulnerability in an API endpoint that constructs file paths from unsanitized user input. The endpoint accepts a filename via a query parameter and utilizes Go's native `filepath.Clean` function without ensuring that the resultant path remains confined to the designated directory. During dynamic testing, crafted input containing directory traversal sequences enabled access to files outside the expected file storage area. The issue was confirmed through taint analysis, where user-controlled data flowed directly into sensitive file operations. This vulnerability exposes the system to unauthorized file disclosure, directly impacting data confidentiality.
 
 ```go
 package main

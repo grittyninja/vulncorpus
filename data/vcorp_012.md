@@ -1,7 +1,7 @@
 # NoSQL Injection in .NET Core gRPC Service
 
 # Vulnerability Case
-During our assessment of Acme Corp’s .NET Core gRPC service interfacing with MongoDB, we identified a critical NoSQL injection flaw. The issue was discovered during code review and dynamic analysis where the gRPC endpoint directly interpolated unsanitized user input into a MongoDB query filter. This design flaw allowed for the manipulation of query logic by embedding malicious payloads in the input parameter. The vulnerability was observed in a scenario where an attacker could inject special characters or MongoDB operators to alter the intended query behavior, thereby bypassing access controls. Exploitable manipulation of query parameters in this context could lead to unauthorized access or modification of sensitive data.
+During our assessment of Acme Corp's .NET Core gRPC service interfacing with MongoDB, we identified a critical NoSQL injection flaw. The issue was discovered during code review and dynamic analysis where the gRPC endpoint directly interpolated unsanitized user input into a MongoDB query filter. This design flaw allowed for the manipulation of query logic by embedding malicious payloads in the input parameter. The vulnerability was observed in a scenario where an attacker could inject special characters or MongoDB operators to alter the intended query behavior, thereby bypassing access controls. Exploitable manipulation of query parameters in this context could lead to unauthorized access or modification of sensitive data.
 
 
 ```csharp

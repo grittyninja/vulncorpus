@@ -1,7 +1,7 @@
 # JWT Token Verification Bypass
 
 # Vulnerability Case
-During the security assessment of Acme Corp's Java authentication module built on Spring Boot and the Auth0 java-jwt library, we identified a critical vulnerability where JWT tokens are decoded without performing the mandatory signature verification step. During code review and dynamic testing, it became evident that the token’s integrity was not being validated before use, enabling attackers to forge tokens with arbitrary claims. The omission of the call to the `.verify()` method allows potentially malicious tokens to bypass authentication checks, posing a significant risk of privilege escalation and unauthorized access.
+During the security assessment of Acme Corp's Java authentication module built on Spring Boot and the Auth0 java-jwt library, we identified a critical vulnerability where JWT tokens are decoded without performing the mandatory signature verification step. During code review and dynamic testing, it became evident that the token's integrity was not being validated before use, enabling attackers to forge tokens with arbitrary claims. The omission of the call to the `.verify()` method allows potentially malicious tokens to bypass authentication checks, posing a significant risk of privilege escalation and unauthorized access.
 
 ```java
 import com.auth0.jwt.JWT;

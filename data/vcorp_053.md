@@ -1,7 +1,7 @@
 # SSLv3 Protocol Usage in Golang TLS Configuration
 
 # Vulnerability Case
-During a routine security audit of Acme Corp's Golang-based microservices, we identified that one of the API endpoints responsible for secure communications continued to use a legacy TLS configuration specifying `tls.VersionSSL30` as its minimum protocol version. Static code analysis and dynamic testing revealed that the insecure SSLv3 protocol was still permitted, despite its well-documented vulnerabilities such as the POODLE attack. This configuration was found in a core service built with Go’s standard [crypto/tls](https://pkg.go.dev/crypto/tls) package, which has been leveraged in production environments across Acme’s secure API endpoints. The persistence of SSLv3 significantly undermines the cryptographic strength of the system, potentially exposing sensitive customer data during transit.
+During a routine security audit of Acme Corp's Golang-based microservices, we identified that one of the API endpoints responsible for secure communications continued to use a legacy TLS configuration specifying `tls.VersionSSL30` as its minimum protocol version. Static code analysis and dynamic testing revealed that the insecure SSLv3 protocol was still permitted, despite its well-documented vulnerabilities such as the POODLE attack. This configuration was found in a core service built with Go's standard [crypto/tls](https://pkg.go.dev/crypto/tls) package, which has been leveraged in production environments across Acme's secure API endpoints. The persistence of SSLv3 significantly undermines the cryptographic strength of the system, potentially exposing sensitive customer data during transit.
 
 ```go
 package main

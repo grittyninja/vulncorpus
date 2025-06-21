@@ -1,7 +1,7 @@
 # LDAP Injection in Authentication Module
 
 # Vulnerability Case
-During a security assessment of Acme Corp's C++ LDAP authentication module, we discovered that untrusted user input is directly concatenated into LDAP distinguished names (DN) without proper escaping. This vulnerability was identified when reviewing the module’s source code and testing against crafted inputs, leading to a scenario where LDAP queries are manipulated arbitrarily. In this context, user-supplied data is embedded into the LDAP query string without sanitization, bypassing input validation mechanisms inherent in libraries such as OpenLDAP. The issue was observed during dynamic testing on a Linux system running the OpenLDAP toolkit, revealing the potential for unauthorized directory access. Such LDAP Injection (DN) vulnerabilities can critically compromise the integrity and confidentiality of directory services.
+During a security assessment of Acme Corp's C++ LDAP authentication module, we discovered that untrusted user input is directly concatenated into LDAP distinguished names (DN) without proper escaping. This vulnerability was identified when reviewing the module's source code and testing against crafted inputs, leading to a scenario where LDAP queries are manipulated arbitrarily. In this context, user-supplied data is embedded into the LDAP query string without sanitization, bypassing input validation mechanisms inherent in libraries such as OpenLDAP. The issue was observed during dynamic testing on a Linux system running the OpenLDAP toolkit, revealing the potential for unauthorized directory access. Such LDAP Injection (DN) vulnerabilities can critically compromise the integrity and confidentiality of directory services.
 
 ```cpp
 #include <iostream>
